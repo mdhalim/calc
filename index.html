@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <script src="jquery-1.10.2.js" type="text/javascript"></script>
+
+
+<script>
+function add()
+{ $('#results').text(" ");
+  results = 0;
+  var x = document.getElementById('digit1').value;
+  console.log(x);
+  var y = document.getElementById('digit2').value;
+  results= parseInt(x) + parseInt(y);
+  console.log(results);
+}
+function substract()
+{ $('#results').text(" ");
+  results = 0;
+  var x= document.getElementById('digit1').value;
+  var y= document.getElementById('digit2').value;
+  var results= parseInt(x) - parseInt(y);
+  console.log(results);
+
+}
+function multiply()
+{ $('#results').text(" ");
+  results = 0;
+  var x= document.getElementById('digit1').value;
+  var y= document.getElementById('digit2').value;
+  var results= x*y;
+  console.log(results);
+
+}
+function divide()
+{ $('#results').text(" ");
+ results = 0;
+  var x= document.getElementById('digit1').value;
+  var y= document.getElementById('digit2').value;
+  var results= parseInt(x) / parseInt(y);
+  console.log(results);
+
+}
+function calc()
+{ 
+  $('#results').text(results);
+}
+
+$(document).ready(function() {
+
+    $('#add').on('click', function() {
+        add();
+    });
+    $('#substract').on('click', function() {
+        substract();
+    });
+    $('#multiply').on('click', function() {
+        multiply();
+    });
+    $('#divide').on('click', function() {
+        divide();
+    });
+    $('#calc').on('click', function() {
+      calc();
+    });
+
+});
+
+</script>
+<style>
+.container
+{
+width: 100;
+margin-top: 10%;
+margin-left: auto;
+margin-right: auto;
+}
+</style>
+
+</head>
+  <body>
+      <div class="container">
+          <div class="jumbotron col-sm-12">
+        <div class="row">
+          <div class="col-sm-4">Enter the first No.</div>
+          <div class="col-sm-4"><input type="text" id="digit1"/></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">Enter the second No.</div>
+          <div class="col-sm-4"><input type="text" id="digit2"/></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+          <div class="btn-group btn-group-justified">
+      <input type="button" class="btn btn-primary" value=" + " id="add"/>
+      <input type="button" class="btn btn-primary" value=" - " id="substract"/>
+      <input type="button" class="btn btn-primary" value=" * " id="multiply"/>
+      <input type="button" class="btn btn-primary" value=" / " id="divide"/>
+      </div>
+    </div>
+
+    </div>
+    <div class="row">
+    <div class="col-sm-4">
+     <input type="button" class="btn btn-primary" id="calc" value="Calculate"/>
+    </div>
+    <div class="col-sm-4">
+    <h6 id="results"></h6>
+    </div>
+
+    </div>
+  </div>
+</div>
+  </body>
+</html>
